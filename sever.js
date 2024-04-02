@@ -40,7 +40,6 @@ app.post('/users', (req, res) => {
     const { fname_user, lname_user, username_user, password_user, img } = req.body;
     const type_user = 1;
 
-    // Check if required fields are not empty
     if (!fname_user || !lname_user || !username_user || !password_user || !img) {
         return res.status(400).json({ error: 'All fields are required' });
     }
